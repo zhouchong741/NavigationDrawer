@@ -1,5 +1,6 @@
 package com.zc741.navigationdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,7 +26,7 @@ public class ScrollingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                Toast.makeText(ScrollingActivity.this, "back",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScrollingActivity.this, "back", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -35,7 +36,7 @@ public class ScrollingActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
 
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.action_search:
                         Toast.makeText(ScrollingActivity.this, "search", Toast.LENGTH_SHORT).show();
                         break;
@@ -58,8 +59,8 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                startActivity(new Intent(ScrollingActivity.this, TabLayoutActivity.class));
             }
         });
 
