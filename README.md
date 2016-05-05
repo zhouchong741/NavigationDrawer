@@ -1,3 +1,7 @@
 # NavigationDrawer
 
-NavigationDrawer和ToolBar中和使用
+NavigationDrawer和ToolBar混合使用
+
+### 例子： ###
+![](http://i.imgur.com/bmJAcKw.gif)
+
