@@ -1,5 +1,6 @@
 package com.zc741.navigationdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +67,12 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+    public void turn_to_another(View view){
+        Toast.makeText(this, "111",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, ScrollingActivity.class));
+    }
+
 
     @Override
     public void onBackPressed() {
