@@ -23,7 +23,7 @@
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".TabLayoutActivity" />
-        <activity android:name=".CollasingToolbarLayoutActivity"></activity>
+        <activity android:name=".CoordinatorLayouttActivity"></activity>
     </application>
 
 </manifest>

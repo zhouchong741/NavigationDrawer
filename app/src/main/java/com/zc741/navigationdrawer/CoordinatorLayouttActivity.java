@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
-public class CollasingToolbarLayoutActivity extends AppCompatActivity {
+public class CoordinatorLayouttActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class CollasingToolbarLayoutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_collasing_toolbar_layout);
 
         Toolbar collasingToolbar = (Toolbar) findViewById(R.id.collasing_toolbar);
-        collasingToolbar.setTitle("collasingToolbar");
+        collasingToolbar.setTitle("CoordinatorLayout");
         collasingToolbar.setNavigationIcon(R.mipmap.ic_arrow_back);
         collasingToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,11 +50,11 @@ public class CollasingToolbarLayoutActivity extends AppCompatActivity {
             }
         });
 
-        TabLayout collasing_tablayout = (TabLayout) findViewById(R.id.collasing_tablayout);
-        collasing_tablayout.setTabMode(TabLayout.MODE_FIXED);
-        collasing_tablayout.setTabTextColors(Color.WHITE,Color.LTGRAY);
+        TabLayout coordinatorLayout = (TabLayout) findViewById(R.id.collasing_tablayout);
+        coordinatorLayout.setTabMode(TabLayout.MODE_FIXED);
+        coordinatorLayout.setTabTextColors(Color.WHITE,Color.LTGRAY);
         for (int i = 1; i <= 4; i++) {
-            collasing_tablayout.addTab(collasing_tablayout.newTab().setText("Tab" + i));
+            coordinatorLayout.addTab(coordinatorLayout.newTab().setText("Tab" + i));
         }
     }
 }

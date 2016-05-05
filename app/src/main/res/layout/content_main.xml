@@ -21,8 +21,48 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="ScrollingActivity" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_detail1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="8dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:layout_below="@id/ll_detail"
+        android:onClick="turn_to_another1"
+        android:background="@drawable/items_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TabLayoutActivity" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_detail2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="8dp"
+        android:clickable="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/ll_detail1"
+        android:onClick="turn_to_another2"
+        android:background="@drawable/items_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CollasingToolbarLayoutActivity" />
     </LinearLayout>
 </RelativeLayout>
