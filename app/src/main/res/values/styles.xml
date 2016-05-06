@@ -16,5 +16,8 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
+    <style name="searchPopup">
+        <item name="android:windowEnterAnimation">@anim/search_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/search_popup_out</item>
+    </style>
 </resources>

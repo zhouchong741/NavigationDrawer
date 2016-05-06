@@ -2,6 +2,7 @@ package com.zc741.navigationdrawer;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -9,17 +10,22 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -39,7 +45,8 @@ public class MainActivity extends AppCompatActivity
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_search:
-                        Toast.makeText(MainActivity.this, "search", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "search", Toast.LENGTH_SHORT).show();
+                        searchPopup();
                         break;
                     case R.id.action_notification:
                         Toast.makeText(MainActivity.this, "notification", Toast.LENGTH_SHORT).show();
@@ -140,7 +147,37 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    //处理键盘监听
+    private void searchPopup() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.search_popue, null);
+        PopupWindow popupWindow = new PopupWindow(view, ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
+        popupWindow.setAnimationStyle(R.style.searchPopup);
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());
+        popupWindow.setOutsideTouchable(true);
+        WindowManager.LayoutParams params = getWindow().getAttributes();//创建当前界面的一个参数对象
+        params.alpha = 0.8f;
+        getWindow().setAttributes(params);//把该参数对象设置进当前界面中
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                WindowManager.LayoutParams params = getWindow().getAttributes();
+                params.alpha = 1.0f;//设置为不透明，即恢复原来的界面
+                getWindow().setAttributes(params);
+            }
+        });
+
+        //第一个参数为父View对象，即PopupWindow所在的父控件对象，第二个参数为它的重心，后面两个分别为x轴和y轴的偏移量
+        popupWindow.showAtLocation(inflater.inflate(R.layout.activity_main, null), Gravity.TOP, 0, 0);
+
+        //键盘弹出
+        EditText edit_search = (EditText) view.findViewById(R.id.edit_search);
+        edit_search.setFocusable(true);
+        edit_search.requestFocus();
+        InputMethodManager inputMethodManager = (InputMethodManager) edit_search.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+    }
+
+    //处理键盘监听 点击除EditText区域之外键盘消失
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
@@ -173,7 +210,7 @@ public class MainActivity extends AppCompatActivity
             if (ev.getX() > left && ev.getX() < right && ev.getY() > top && ev.getY() < bottom) {
                 //点击的是输入框 保留点击EditText事件
                 return false;
-            }else {
+            } else {
                 return true;
             }
         }

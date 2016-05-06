@@ -17,5 +17,9 @@
         <item name="android:colorControlNormal">@color/colorControlNormal</item>
     </style>
 
+    <style name="searchPopup">
+        <item name="android:windowEnterAnimation">@anim/search_popup_in</item>
+        <item name="android:windowExitAnimation">@anim/search_popup_out</item>
+    </style>
 
 </resources>
