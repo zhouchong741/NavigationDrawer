@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 /**
+ *
  * Created by jiae on 2016/5/6.
  */
 public class ResumeAdapter extends FragmentPagerAdapter {
