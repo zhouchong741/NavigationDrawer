@@ -69,14 +69,20 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    public void turn_to_another(View view){
+    public void turn_to_another(View view) {
         startActivity(new Intent(this, ScrollingActivity.class));
     }
-    public void turn_to_another1(View view){
+
+    public void turn_to_another1(View view) {
         startActivity(new Intent(this, TabLayoutActivity.class));
     }
-    public void turn_to_another2(View view){
+
+    public void turn_to_another2(View view) {
         startActivity(new Intent(this, CoordinatorLayouttActivity.class));
+    }
+
+    public void turn_to_another3(View view) {
+        startActivity(new Intent(this, NestedScrollViewViewPager.class));
     }
 
 

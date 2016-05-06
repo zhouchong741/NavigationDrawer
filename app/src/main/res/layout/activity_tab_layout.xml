@@ -8,24 +8,30 @@
     android:orientation="vertical"
     tools:context=".TabLayoutActivity">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/tab_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tab_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways" />
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#fff"
-            app:tabGravity="fill"
-            app:tabMode="fixed" />
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="40dp"/>
 
-        <android.support.v4.view.ViewPager
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.zc741.navigationdrawer.MyViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
+            android:background="#fff"
             android:layout_height="match_parent" />
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

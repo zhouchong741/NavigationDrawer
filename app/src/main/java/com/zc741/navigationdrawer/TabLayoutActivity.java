@@ -56,10 +56,9 @@ public class TabLayoutActivity extends AppCompatActivity {
             }
         });
 
-
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);//设置tabs是否滚动，数量少不滚动
+        tabLayout.setTabTextColors(Color.WHITE, Color.LTGRAY);
 
         final List<MyFragment> myFragments = new ArrayList<>();
         final List<String> tabtitles = new ArrayList<>();

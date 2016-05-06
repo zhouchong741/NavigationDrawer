@@ -14,7 +14,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:navigationBarColor">@color/navigationBarColor</item>
         <item name="android:windowBackground">@color/windowBackground</item>
-        <item name="android:colorControlNormal">#fff</item>
+        <item name="android:colorControlNormal">@color/colorControlNormal</item>
     </style>
 
 

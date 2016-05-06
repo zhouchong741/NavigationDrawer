@@ -23,7 +23,8 @@
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".TabLayoutActivity" />
-        <activity android:name=".CoordinatorLayouttActivity"></activity>
+        <activity android:name=".CoordinatorLayouttActivity" />
+        <activity android:name=".NestedScrollViewViewPager"></activity>
     </application>
 
 </manifest>
