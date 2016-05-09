@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_search:
-                        //Toast.makeText(MainActivity.this, "search", Toast.LENGTH_SHORT).show();
                         searchPopup();
                         break;
                     case R.id.action_notification:
@@ -61,7 +60,6 @@ public class MainActivity extends AppCompatActivity
                 return true;
             }
         });
-
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;

@@ -4,14 +4,13 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
-public class NestedScrollViewViewPager extends AppCompatActivity {
+public class NestedScrollViewViewPager extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
