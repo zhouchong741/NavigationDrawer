@@ -63,9 +63,5 @@ public class ScrollingActivity extends BaseActivity {
 //                startActivity(new Intent(ScrollingActivity.this, TabLayoutActivity.class));
             }
         });
-
-
-
-
     }
 }
