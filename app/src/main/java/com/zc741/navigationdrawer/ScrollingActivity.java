@@ -18,6 +18,7 @@ public class ScrollingActivity extends BaseActivity {
         setContentView(R.layout.activity_scrolling);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        assert toolbar != null;
         toolbar.setTitle("Title");
 
         //返回键的设置与监听

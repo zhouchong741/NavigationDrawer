@@ -31,8 +31,8 @@ public abstract class BaseActivity extends AppCompatActivity implements SlidingM
         slidingMenu.setShadowDrawable(R.drawable.slide_shadow);
         //设置下面的布局，也就是我们上面定义的透明菜单离右边屏幕边缘的距离为0，也就是滑动开以后菜单会全屏幕显示
         slidingMenu.setBehindOffset(0);
-        slidingMenu.setFadeDegree(0.35f);
-        //菜单打开监听 菜单打开后腰finish当前activity
+        slidingMenu.setFadeDegree(0.7f);//滑动时边缘颜色的透明度 从 0.7f~0f 变化
+        //菜单打开监听 菜单打开后要finish当前activity
         slidingMenu.setOnOpenedListener(this);
 
         //SlidingMenu.LEFT
