@@ -21,7 +21,7 @@
         <item name="android:windowExitAnimation">@anim/search_popup_out</item>
     </style>
 
-    //slidingtoback
+    <!--slidingtoback-->
     <style name="TransparentBG.Theme" parent="AppTheme">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>

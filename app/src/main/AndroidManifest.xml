@@ -22,11 +22,16 @@
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/TransparentBG.Theme" />
-        <activity android:name=".TabLayoutActivity"
-            android:theme="@style/TransparentBG.Theme"/>
-        <activity android:name=".CoordinatorLayouttActivity"
-            android:theme="@style/TransparentBG.Theme"/>
-        <activity android:name=".NestedScrollViewViewPager"
+        <activity
+            android:name=".TabLayoutActivity"
+            android:theme="@style/TransparentBG.Theme" />
+        <activity
+            android:name=".CoordinatorLayouttActivity"
+            android:theme="@style/TransparentBG.Theme" />
+        <activity
+            android:name=".NestedScrollViewViewPager"
+            android:theme="@style/TransparentBG.Theme" />
+        <activity android:name=".BottomSheetActivity"
             android:theme="@style/TransparentBG.Theme"/>
     </application>
 

@@ -83,13 +83,32 @@
             android:layout_height="wrap_content"
             android:text="NestedScrollViewViewPager" />
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_detail4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="8dp"
+        android:clickable="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/ll_detail3"
+        android:onClick="turn_to_another4"
+        android:background="@drawable/items_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BottomSheet" />
+    </LinearLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout"
         android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll_detail3">
+        android:layout_below="@id/ll_detail4">
 
         <EditText
             android:layout_width="match_parent"

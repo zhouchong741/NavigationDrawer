@@ -231,6 +231,9 @@ public class MainActivity extends AppCompatActivity
     public void turn_to_another3(View view) {
         startActivity(new Intent(this, NestedScrollViewViewPager.class));
     }
+    public void turn_to_another4(View view) {
+        startActivity(new Intent(this, BottomSheetActivity.class));
+    }
 
 
     @Override
