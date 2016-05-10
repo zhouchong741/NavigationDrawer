@@ -6,4 +6,5 @@
     <color name="navigationBarColor">#3F51B5</color>
     <color name="windowBackground">#999999</color>
     <color name="colorControlNormal">#FFFFFF</color>
+    <color name="statusBarColor">#FFFFFF</color>
 </resources>

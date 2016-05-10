@@ -26,7 +26,7 @@
             android:name=".TabLayoutActivity"
             android:theme="@style/TransparentBG.Theme" />
         <activity
-            android:name=".CoordinatorLayouttActivity"
+            android:name=".CoordinatorLayoutActivity"
             android:theme="@style/TransparentBG.Theme" />
         <activity
             android:name=".NestedScrollViewViewPager"

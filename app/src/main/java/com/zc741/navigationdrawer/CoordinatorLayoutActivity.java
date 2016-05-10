@@ -15,7 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CoordinatorLayouttActivity extends BaseActivity {
+public class CoordinatorLayoutActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +23,21 @@ public class CoordinatorLayouttActivity extends BaseActivity {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_collasing_toolbar_layout);
 
-        Toolbar collasingToolbar = (Toolbar) findViewById(R.id.collasing_toolbar);
-        collasingToolbar.setTitle("CoordinatorLayout");
-        collasingToolbar.setNavigationIcon(R.mipmap.ic_arrow_back);
-        collasingToolbar.inflateMenu(R.menu.base_toolbar_menu);
-        collasingToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        assert toolbar != null;
+        toolbar.setTitle("CoordinatorLayout");
+
+        toolbar.setNavigationIcon(R.mipmap.ic_arrow_back);
+        toolbar.inflateMenu(R.menu.base_toolbar_menu);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
 
-        collasingToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {

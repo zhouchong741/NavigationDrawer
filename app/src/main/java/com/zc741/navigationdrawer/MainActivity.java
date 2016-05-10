@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-//                startActivity(new Intent(MainActivity.this, CoordinatorLayouttActivity.class));
+//                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
             }
         });
 
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void turn_to_another2(View view) {
-        startActivity(new Intent(this, CoordinatorLayouttActivity.class));
+        startActivity(new Intent(this, CoordinatorLayoutActivity.class));
     }
 
     public void turn_to_another3(View view) {
